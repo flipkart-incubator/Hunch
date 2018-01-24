@@ -1,0 +1,9 @@
+site_name: Hunch
+#site_url:
+site_author: Flipkart ML Platform Dev Team
+site_description: Hunch.
+
+theme: material
+
+pages:
+- Home: index.md

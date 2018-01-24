@@ -1,10 +1,10 @@
 # Hunch
-Hunch allows users to turn arbitrary machine learning models built using Python into a scalable, hosted service. Simply put, a data scientist can now focus on building the model and Hunch takes care of turning this model into a REST API.
+Hunch allows users to turn arbitrary machine learning models built using Python into a scalable, hosted service. Simply put, a data scientist can now focus on building the model and the Hunch takes care of turning this model into a REST API.
 
 ## Hunch Quick Start Guide 
 This guide helps you setup Hunch on local machine. 
 ### Installation
-- Download Anaconda configuration file from [osx_environment.yml](documentation/docs/resources/osx_environment.yml)/[linux_environment.yml](documentation/docs/resources/linux_environment.yml). Setup conda environment using the following commands. 
+- Download Anaconda configuration file from [osx_environment.yml](resources/osx_environment.yml)/[linux_environment.yml](resources/linux_environment.yml). Setup conda environment using the following commands. 
 ```sh
   conda env create -f osx_environment.yml -n hunch
   # To activate hunch environment, run the following command.
@@ -12,7 +12,7 @@ This guide helps you setup Hunch on local machine.
   # To deactivate hunch environment, run the following command. 
   # source deactivate hunch
 ```
-- Latest Hunch SDK can be downloaded from [here](documentation/docs/resources/hunch-0.0.1.tar.gz).
+- Latest Hunch SDK can be downloaded from [here](resources/hunch-0.0.1.tar.gz).
 - Install Hunch SDK using the following command. 
 ```sh 
    pip install -v --upgrade --no-deps --disable-pip-version-check hunch-0.0.1.tar.gz
@@ -94,7 +94,7 @@ sudo kill -9 <pid>
 ## Hunch Detailed User Guide
 ### End-to-End Workflow
 Here is the end-to-end workflow w.r.t using Hunch.
-![Overview](documentation/docs/resources/workflow.png)
+![Overview](resources/workflow.png)
 
 1. Data scientists install the python Hunch SDK (model publisher earlier) package on their workstation or any instance where models are being trained (we will refer to this as the local environment).
 2. Data scientists build/train a model which typically comprises of one or more objects from a standard ML libraries like Scikit-Learn, Tensorflow etc. At this point it is possible to make predictions in the local environment.
@@ -103,7 +103,7 @@ Here is the end-to-end workflow w.r.t using Hunch.
 5. Developers can now use the model as a REST API. That is, they can simply call a REST API with the MODEL identifier (and version) pass a JSON object which is the input to the model and receive the output of the model as a JSON object.
 
 ### Installation
-- Download Anaconda configuration file from [osx_environment.yml](documentation/docs/resources/osx_environment.yml)/[linux_environment.yml](documentation/docs/resources/linux_environment.yml). Setup conda environment using the following commands. 
+- Download Anaconda configuration file from [osx_environment.yml](resources/osx_environment.yml)/[linux_environment.yml](resources/linux_environment.yml). Setup conda environment using the following commands. 
 ```sh
   conda env create -f osx_environment.yml -n hunch
   # To activate hunch environment, run the following command.
@@ -111,7 +111,7 @@ Here is the end-to-end workflow w.r.t using Hunch.
   # To deactivate hunch environment, run the following command. 
   source deactivate hunch
 ```
-- Latest Hunch SDK can be downloaded from [here](documentation/docs/resources/hunch-0.0.1.tar.gz).
+- Latest Hunch SDK can be downloaded from [here](resources/hunch-0.0.1.tar.gz).
 - Install Hunch SDK using the following command. 
 ```sh 
    pip install -v --upgrade --no-deps --disable-pip-version-check hunch-0.0.1.tar.gz
@@ -636,13 +636,13 @@ print "Result:", response.content
 # Result: {"stack_trace": "NA", "result": "\"Hello World\""}
 ```
 
-## Developer Documentation 
-### Building package 
+### Developer Documentation 
+#### Building package 
 Run the following command to create a package. This command has to be run from the directory where setup.py is available. 
 ```sh
 python setup.py sdist
 ```
-### Model Blob Storage: 
+#### Model Blob Storage: 
 Models can be stored in any blob storage like S3, Azure Blob Storage etc. Hunch has support for S3 and Local File System based storage. 
 Users can add support to any blob storage by implementing storage_client module.  
 
@@ -679,20 +679,6 @@ class StorageClient(object):
 ```
 
 Configuration required for your blob storage can be passed with storage_client_config as dict. 
-
-### Documentation 
-
-Documentation is available as markdown files. You can host documents using [mkdocs](http://www.mkdocs.org/) as well.   
-
-- Install mkdocs.
-- Go to documentation and run the following command to generate static pages needed for the site. 
-```sh
-mkdocs build
-``` 
-- Go to documentation and run the following command to host documents and serve them. 
-```sh
-mkdocs serve
-``` 
 
 
 
