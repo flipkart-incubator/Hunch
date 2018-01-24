@@ -1,0 +1,17 @@
+rotation_status_file: "/tmp/rotation_status"
+model_storage:
+  backend: "local_fs"
+  local_fs:
+    modelrepo_dir: "/tmp/model_repo"
+  s3:
+    access_key: "Dummy Access Key"
+    bucket: "Dummy S3 bucket"
+    chunk_size: 134217728
+    endpoint: "S3 Endpoint"
+    max_error_retry: 5
+    secret_key: "Summy Scret Key"
+    size_limit: 209715100
+model_loader:
+  working_dir: "/tmp"
+custom_package_deployer:
+  working_dir: "/tmp/hunchsdk_custom_libs"
