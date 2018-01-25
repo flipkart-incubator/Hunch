@@ -697,9 +697,11 @@ mkdocs serve
 ## Core Contributors                 
 * Vikas Garg ([@vikasgarg1996](https://github.com/vikasgarg1996))            
 * Roshan Nair ([@roshan-nair](https://github.com/roshan-nair))            
-* Karan Verma ([@karan10111](https://github.com/karan10111))              
+* Karan Verma ([@karan10111](https://github.com/karan10111))      
 * Naresh Sankapelly ([@nareshsankapellyfkrt](https://github.com/nareshsankapellyfkrt))                 
-* Adeel Zafar ([@adzafar](https://github.com/adzafar))              
+* Adeel Zafar ([@adzafar](https://github.com/adzafar))  
+* Akshay Utkarsh Sharma ([@akshay-sharma](https://github.com/akshay-sharma))    
+* Nikhil Ketkar ([@nikhilketkar](https://github.com/nikhilketkar))
 
 
 
